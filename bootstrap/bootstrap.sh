@@ -33,3 +33,6 @@ fi
 
 sudo salt-call state.highstate
 sudo salt-key -A -y
+
+sudo service salt-master restart
+sudo service salt-minion restart

@@ -5,6 +5,6 @@ base:
   'nodename:MAX-COMPY':
     - match: grain
     - synergy.server
-  'nodename:MAX-LAPPY':
-    - match: grain
+  'nodename:(MAX-TAPPY|MAX-LAPPY)':
+    - match: grain_pcre
     - synergy.client
