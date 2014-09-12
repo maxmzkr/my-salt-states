@@ -2,6 +2,7 @@ base:
   '*':
     - eecs281
     - synergy
+    - vimlatex
   'nodename:MAX-COMPY':
     - match: grain
     - synergy.server
