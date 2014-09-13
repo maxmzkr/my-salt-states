@@ -2,6 +2,9 @@ synergy-client-script:
   file.managed:
     - name: /usr/bin/synergyc.sh
     - source: salt://synergy/synergy_client.sh
+    - mode: 744
+    - user: root
+    - group: root
 
 synergy-client-autostart:
   file.blockreplace:
