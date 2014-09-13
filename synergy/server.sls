@@ -9,5 +9,5 @@ synergy-server-autostart:
     - marker_start: "# START managed zone synergy-server-autostart -DO-NOT-EDIT"
     - marker_end: "# END managed zone synergy-server-autostart --"
     - append_if_not_found: True
-    - content: greeter-setup-script=/usr/bin/synergys --crypto-pass '{{ salt["PasswordGetter.get_password"]("synergy") }}'
+    - content: greeter-setup-script=/usr/bin/synergys --config /etc/synergy.conf
     - backup: False
