@@ -3,6 +3,7 @@ base:
     - eecs281
     - synergy
     - vimlatex
+    - liberosoc
   'nodename:MAX-COMPY':
     - match: grain
     - synergy.server
