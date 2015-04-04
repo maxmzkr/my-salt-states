@@ -3,7 +3,6 @@ base:
     - eecs281
     - synergy
     - vimlatex
-    - valgrind
   'nodename:MAX-COMPY':
     - match: grain
     - synergy.server
