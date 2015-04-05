@@ -1,3 +1,6 @@
+haskell-preq-install:
+  pkg.installed:
+    - name: software-properties-common
 haskell-repo:
   pkgrepo.managed:
     - ppa: hvr/ghc
