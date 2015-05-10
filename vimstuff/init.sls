@@ -9,6 +9,7 @@ vimstuff-clone:
     - name: git@github.com:maxmzkr/vimstuff.git
     - target: /home/max/.vimstuff
     - identity: /home/max/.ssh/github
+    - submodules: True
     - user: max
 
 vimstuf-vimrc-link:
@@ -22,3 +23,27 @@ vimstuff-vim-link:
     - name: /home/max/.vim
     - target: /home/max/.vimstuff/.vim
     - user: max
+
+vimstuff-scritp:
+  file.managed:
+    - name: /tmp/vimstuffscript.vim
+    - source: salt://vimstuff/script.vim
+
+vimstuff-install:
+  cmd.run:
+    - name: "vim -s '/tmp/vimstuffscript.vim'"
+    - user: max
+
+vimstuff-cmake:
+  pkg.installed:
+    - name: cmake
+
+vimstuff-prereq:
+  pkg.installed:
+    - name: libpython-dev
+
+vimstuff-youcompleteme:
+  cmd.run:
+    - name: "./install.sh --clang-completer"
+    - user: max
+    - cwd: "/home/max/.vim/bundle/YouCompleteMe"
