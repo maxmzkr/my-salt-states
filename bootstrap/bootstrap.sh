@@ -1,5 +1,5 @@
 sudo apt-get install python-software-properties -y
-sudo add-apt-repository ppa:saltstack/salt -y
+sudo add-apt-repository ppa:saltstack/salt2014-7 -y
 
 sudo apt-get update -y
 sudo apt-get install xclip -y
